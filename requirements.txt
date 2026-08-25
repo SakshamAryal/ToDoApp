@@ -1,0 +1,11 @@
+fastapi
+sqlalchemy
+uvicorn
+pydantic_settings
+pydantic
+psycopg2
+uliweb-alembic
+jose
+pwdlib
+python-jose
+starlette
