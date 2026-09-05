@@ -1,7 +1,7 @@
 from datetime import timedelta, datetime, timezone
 from typing import Optional
 from jose import jwt
-from config import settings
+from todo.config import settings
 
 def create_access_token(subject: str, expires_delta: Optional[timedelta] = None):
     if expires_delta:

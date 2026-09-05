@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 
 from sqlalchemy.orm import Mapped, mapped_column
 
-from sqlalchemy import String, Integer, Boolean, DateTime
+from sqlalchemy import String, Integer, Boolean, DateTime, ForeignKey
 
 from todo.database.base_class import Base
 
@@ -16,3 +16,4 @@ class Task(Base):
     deadline: Mapped[datetime] = mapped_column(DateTime, nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime,default = datetime.now(timezone.utc), nullable=False)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.now(timezone.utc), nullable=False)
+    author: Mapped[str] = mapped_column(ForeignKey("users.username"), nullable=False)

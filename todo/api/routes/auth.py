@@ -14,12 +14,12 @@ from todo.models.user import User
 from todo.schemas.token import Token
 from todo.dependencies.db_dependency import get_db
 
-router = APIRouter(
+auth = APIRouter(
     prefix="/auth",
     tags=["auth"]
 )
 
-@router.post("/login", response_model= Token)
+@auth.post("/login", response_model= Token)
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)) -> Any:
     user = db.query(User).filter(User.username == form_data.username).first()
     if not user or not verify_password(form_data.password, user.hashed_password):
@@ -40,7 +40,7 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
         "token_type": "bearer",
     }
 
-@router.post("/refresh", response_model= Token)
+@auth.post("/refresh", response_model= Token)
 async def refresh_token(refresh_token: str= Body(...), db: Session = Depends(get_db)) -> Any:
     try:
         payload = decode_token(refresh_token)

@@ -9,3 +9,4 @@ class User(Base):
     email: Mapped[str] = mapped_column(unique=True)
     username: Mapped[str] = mapped_column(unique=True)
     hashed_password: Mapped[str]
+    role: Mapped[bool]

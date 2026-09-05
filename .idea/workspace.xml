@@ -5,31 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b101d9f-f521-4a38-b51a-985d7b7f70b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/api/auth_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/api/routes/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/api/routes/todo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/jwt_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/schemas/task.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/schemas/token.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo/schemas/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/todoapp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/api/routes/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/api/routes/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/routes/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/api/routes/todo.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/routes/todo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/api/routes/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/routes/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/database/db.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/database/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/database/session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/dependencies/db_dependency.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/dependencies/db_dependency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/dependencies/user_dependency.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/dependencies/user_dependency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/jwt_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/jwt_handler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/models/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models/task.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/schemas/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +150,12 @@
       <workItem from="1787509439771" duration="8322000" />
       <workItem from="1787587274875" duration="16797000" />
       <workItem from="1787668209364" duration="13269000" />
-      <workItem from="1787682660115" duration="2986000" />
+      <workItem from="1787682660115" duration="8010000" />
+      <workItem from="1787850588001" duration="5589000" />
+      <workItem from="1788291304159" duration="4609000" />
+      <workItem from="1788568174389" duration="2576000" />
+      <workItem from="1788633600273" duration="4000" />
+      <workItem from="1788633611594" duration="100000" />
     </task>
     <servers />
   </component>

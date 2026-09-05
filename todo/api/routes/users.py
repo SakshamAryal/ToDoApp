@@ -16,7 +16,7 @@ user_route = APIRouter(
 def create_user(create_user_request: UserCreate, db: Session = Depends(get_db)):
     new_user = User(
         email=create_user_request.email,
-        username=create_user_request.email,
+        username=create_user_request.username,
         hashed_password=get_hashed_password(create_user_request.password),
     )
     db.add(new_user)
@@ -24,7 +24,7 @@ def create_user(create_user_request: UserCreate, db: Session = Depends(get_db)):
 
 @user_route.get("/me", response_model=UserResponse)
 async def get_current_user(current_user: str = Depends(get_current_user), db: Session = Depends(get_db)):
-    user = db.query(User).filter(User.username == current_user).first()
+    user = db.query(User).filter(User.email == current_user).first()
     if not user:
         raise HTTPException(status_code=401, detail="Please Login.")
     return user

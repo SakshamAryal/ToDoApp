@@ -2,9 +2,6 @@ import os
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from todo.log import get_logger
 
-#
-# DOTENV = os.path.join(os.path.dirname(), ".env")
-
 log = get_logger(__name__)
 
 class Settings(BaseSettings):
