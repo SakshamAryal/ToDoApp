@@ -36,7 +36,7 @@ async def get_task(task_id: int, db: Session = Depends(get_db), current_user: st
     return db_task
 
 
-@todo.get("/task", response_model=List[TaskResponse])
+@todo.get("/task", response_model=list[TaskResponse])
 async def get_all_tasks(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     user = db.query(User).filter(User.email == current_user).first()
     if not user:
