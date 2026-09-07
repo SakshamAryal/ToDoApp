@@ -9,6 +9,11 @@ class Settings(BaseSettings):
     env_file=".env",
     env_file_encoding="utf-8",
     )
+    POSTGRES_HOST : str
+    POSTGRES_PORT : str
+    POSTGRES_DB : str
+    POSTGRES_USER : str
+    POSTGRES_PASSWORD:str
     DATABASE_URL: str
     SECRET_KEY: str
     ALGORITHM: str
@@ -16,4 +21,5 @@ class Settings(BaseSettings):
     REFRESH_TOKEN_EXPIRE_DAYS: int
 
 
+# def database_url_builder()
 settings = Settings()

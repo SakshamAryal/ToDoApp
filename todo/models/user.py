@@ -1,4 +1,3 @@
-
 from sqlalchemy.orm import Mapped, mapped_column
 
 from todo.database.base_class import Base
@@ -9,4 +8,4 @@ class User(Base):
     email: Mapped[str] = mapped_column(unique=True)
     username: Mapped[str] = mapped_column(unique=True)
     hashed_password: Mapped[str]
-    role: Mapped[bool]
+    admin: Mapped[bool] = mapped_column(default=False)

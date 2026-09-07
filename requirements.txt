@@ -3,7 +3,7 @@ sqlalchemy
 uvicorn
 pydantic_settings
 pydantic
-psycopg2
+psycopg[binary]
 uliweb-alembic
 jose
 pwdlib

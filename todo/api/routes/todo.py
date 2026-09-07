@@ -26,7 +26,7 @@ async def create_task(new_task: TaskCreate, db: Session = Depends(get_db), curre
 
 @todo.get("/task/{task_id}", response_model=TaskResponse)
 async def get_task(task_id: int, db: Session = Depends(get_db), current_user: str = Depends(get_current_user)):
-    user = db.query(User).filter(User.id == current_user).first()
+    user = db.query(User).filter(User.email == current_user).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
     db_task = db.query(Task).filter(Task.id == task_id).first()
@@ -36,7 +36,7 @@ async def get_task(task_id: int, db: Session = Depends(get_db), current_user: st
 
 @todo.get("/task", response_model=TaskResponse)
 async def get_all_tasks(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
-    user = db.query(User).filter(User.id == current_user).first()
+    user = db.query(User).filter(User.email == current_user).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
     tasks = db.query(Task).filter(Task.author == user.username).all()

@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b101d9f-f521-4a38-b51a-985d7b7f70b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/todo/api/routes/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/074b6ee61fd7_added_author_column_to_tasks_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/d5652845df5b_change_column_name_to_title.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/f97001e610ca_add_admin_field.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pyLspTools.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/todoapp@1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/todoapp@1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/routes/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/routes/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/alembic/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/api/routes/todo.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/routes/todo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/api/routes/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/api/routes/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/jwt_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/jwt_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/models/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models/task.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/schemas/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +46,10 @@
     &quot;accountId&quot;: &quot;58601970-96f0-42c8-aeee-34161b8c0e60&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/todo/models/task.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/todo/models/user.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -77,7 +83,7 @@
     &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.insyncwithfoo.pyright.configurations.PyrightProjectConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -103,7 +109,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="DEBUG_JUST_MY_CODE" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/todo/config.py" />
@@ -124,8 +130,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-PY-262.9437.214" />
-        <option value="bundled-python-sdk-821f704e66d9-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.9437.214" />
+        <option value="bundled-python-sdk-ce6832f46686-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.178" />
       </set>
     </attachedChunks>
   </component>
@@ -156,6 +161,7 @@
       <workItem from="1788568174389" duration="2576000" />
       <workItem from="1788633600273" duration="4000" />
       <workItem from="1788633611594" duration="100000" />
+      <workItem from="1788641928697" duration="3000" />
     </task>
     <servers />
   </component>
@@ -180,6 +186,11 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/todo/dependencies/db_dependency.py</url>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/alembic/versions/074b6ee61fd7_added_author_column_to_tasks_table.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
