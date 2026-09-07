@@ -4,7 +4,6 @@ from todo.api.routes.auth import auth
 from todo.api.routes.users import user_route
 from todo.api.routes.admin import admin
 
-
 app = FastAPI()
 
 app.include_router(todo)

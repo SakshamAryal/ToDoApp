@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from todo.models.user import User
 from todo.schemas.user import UserCreate, UserResponse
 from todo.dependencies.db_dependency import get_db
-from todo.api.auth_utils import get_hashed_password, verify_password
+from todo.api.auth_utils import get_hashed_password
 from todo.dependencies.user_dependency import get_current_user
 
 
