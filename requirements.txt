@@ -10,3 +10,4 @@ pwdlib[argon2]
 python-jose
 starlette
 python-multipart
+pydantic[email]
