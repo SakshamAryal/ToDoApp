@@ -1,10 +1,10 @@
 fastapi
-sqlalchemy
 uvicorn
 pydantic_settings
 pydantic
 psycopg[binary]>=3.1.0
-uliweb-alembic
+sqlalchemy>=2.0.0,<3.0.0
+alembic>=1.13.0
 jose
 pwdlib[argon2]
 python-jose
