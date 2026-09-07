@@ -24,6 +24,7 @@ async def create_task(new_task: TaskCreate, db: Session = Depends(get_db), curre
     db.add(db_task)
     db.commit()
 
+
 @todo.get("/task/{task_id}", response_model=TaskResponse)
 async def get_task(task_id: int, db: Session = Depends(get_db), current_user: str = Depends(get_current_user)):
     user = db.query(User).filter(User.email == current_user).first()
@@ -34,10 +35,44 @@ async def get_task(task_id: int, db: Session = Depends(get_db), current_user: st
         raise HTTPException(status_code=404, detail="Task not found")
     return db_task
 
-@todo.get("/task", response_model=TaskResponse)
+
+@todo.get("/task", response_model=List[TaskResponse])
 async def get_all_tasks(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     user = db.query(User).filter(User.email == current_user).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
     tasks = db.query(Task).filter(Task.author == user.username).all()
     return tasks
+
+
+@todo.put("/task/{task_id}", response_model=TaskResponse)
+async def update_task(task_id: int, task_update: TaskUpdate, db: Session = Depends(get_db),
+                      current_user: str = Depends(get_current_user)):
+    user = db.query(User).filter(User.email == current_user).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    db_task = db.query(Task).filter(Task.id == task_id).first()
+    if not db_task or db_task.author != user.username:
+        raise HTTPException(status_code=404, detail="Task not found")
+
+    update_data = task_update.model_dump(exclude_unset=True)
+    for field, value in update_data.items():
+        setattr(db_task, field, value)
+    db_task.updated_at = datetime.now(timezone.utc)
+    db.commit()
+    db.refresh(db_task)
+    return db_task
+
+
+@todo.delete("/task/{task_id}")
+async def delete_task(task_id: int, db: Session = Depends(get_db), current_user: str = Depends(get_current_user)):
+    user = db.query(User).filter(User.email == current_user).first()
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    db_task = db.query(Task).filter(Task.id == task_id).first()
+    if not db_task or db_task.author != user.username:
+        raise HTTPException(status_code=404, detail="Task not found")
+
+    db.delete(db_task)
+    db.commit()
+    return {"message": "Task deleted successfully"}
